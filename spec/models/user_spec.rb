@@ -12,8 +12,8 @@ RSpec.describe User, type: :model do
           expect(@user).to be_valid
         end
 
-        it 'nicknameが入力されていれば登録できること' do
-          @user.nickname
+        it 'nicknameが20文字以内で入力されていれば登録できること' do
+          @user.nickname = "鈴木功成"
           expect(@user).to be_valid
         end
 
@@ -53,6 +53,11 @@ RSpec.describe User, type: :model do
           @user.nickname = ''
           @user.valid?
           expect(@user.errors[:nickname]).to include('を入力してください')
+        end
+
+        it 'nicknameが21文字以上で入力されている場合は登録できないこと' do
+          @user.nickname = "鈴木功成鈴木功成鈴木功成鈴木功成鈴木功成鈴木功成"
+          expect(@user.errors[:nickname]).not_to include('を入力してください')
         end
 
         it 'emailが入力されていない場合は登録できないこと' do

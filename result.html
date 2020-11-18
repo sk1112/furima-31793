@@ -297,61 +297,63 @@ a {
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 45px;">
   <dt id="example_group_4" class="passed">新規登録ができるとき</dt>
-    <script type="text/javascript">moveProgressBar('4.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">全ての項目が入力されていれば登録できること</span><span class='duration'>0.36956s</span></dd>
-    <script type="text/javascript">moveProgressBar('8.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">nicknameが入力されていれば登録できること</span><span class='duration'>0.00590s</span></dd>
-    <script type="text/javascript">moveProgressBar('13.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">@を含むemailが入力されていれば登録できること</span><span class='duration'>0.00559s</span></dd>
-    <script type="text/javascript">moveProgressBar('17.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">passwordが6文字以上の半角英数字で、password_confirmationと値が一致していれば登録できること</span><span class='duration'>0.00590s</span></dd>
-    <script type="text/javascript">moveProgressBar('21.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">family_nameが全角(漢字・ひらがな・カタカナ)入力であれば登録できること</span><span class='duration'>0.00777s</span></dd>
-    <script type="text/javascript">moveProgressBar('26.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">first_nameが全角(漢字・ひらがな・カタカナ)入力であれば登録できること</span><span class='duration'>0.00557s</span></dd>
-    <script type="text/javascript">moveProgressBar('30.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">family_name_kanaが全角(カタカナ)入力であれば登録できること</span><span class='duration'>0.02718s</span></dd>
-    <script type="text/javascript">moveProgressBar('34.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">first_name_kanaが全角(カタカナ)入力であれば登録できること</span><span class='duration'>0.00643s</span></dd>
+    <script type="text/javascript">moveProgressBar('4.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">全ての項目が入力されていれば登録できること</span><span class='duration'>0.17144s</span></dd>
+    <script type="text/javascript">moveProgressBar('8.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">nicknameが20文字以内で入力されていれば登録できること</span><span class='duration'>0.00665s</span></dd>
+    <script type="text/javascript">moveProgressBar('12.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">@を含むemailが入力されていれば登録できること</span><span class='duration'>0.00626s</span></dd>
+    <script type="text/javascript">moveProgressBar('16.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">passwordが6文字以上の半角英数字で、password_confirmationと値が一致していれば登録できること</span><span class='duration'>0.00556s</span></dd>
+    <script type="text/javascript">moveProgressBar('20.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">family_nameが全角(漢字・ひらがな・カタカナ)入力であれば登録できること</span><span class='duration'>0.00588s</span></dd>
+    <script type="text/javascript">moveProgressBar('25.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">first_nameが全角(漢字・ひらがな・カタカナ)入力であれば登録できること</span><span class='duration'>0.02703s</span></dd>
+    <script type="text/javascript">moveProgressBar('29.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">family_name_kanaが全角(カタカナ)入力であれば登録できること</span><span class='duration'>0.00595s</span></dd>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">first_name_kanaが全角(カタカナ)入力であれば登録できること</span><span class='duration'>0.00604s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 45px;">
   <dt id="example_group_5" class="passed">新規登録ができないとき</dt>
-    <script type="text/javascript">moveProgressBar('39.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">nicknameが入力されていない場合は登録できないこと</span><span class='duration'>0.00836s</span></dd>
-    <script type="text/javascript">moveProgressBar('43.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">emailが入力されていない場合は登録できないこと</span><span class='duration'>0.00555s</span></dd>
-    <script type="text/javascript">moveProgressBar('47.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">重複したemailが入力されている場合は登録できないこと</span><span class='duration'>0.01532s</span></dd>
-    <script type="text/javascript">moveProgressBar('52.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">passwordが入力されていない場合は登録できないこと</span><span class='duration'>0.00712s</span></dd>
-    <script type="text/javascript">moveProgressBar('56.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">passwordが5文字以下の場合は登録できないこと</span><span class='duration'>0.01059s</span></dd>
-    <script type="text/javascript">moveProgressBar('60.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">passwordが存在してもpassword_confirmationが空では登録できない</span><span class='duration'>0.00424s</span></dd>
-    <script type="text/javascript">moveProgressBar('65.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">family_nameが入力されていない場合は登録できないこと</span><span class='duration'>0.00608s</span></dd>
-    <script type="text/javascript">moveProgressBar('69.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">first_nameが入力されていない場合は登録できないこと</span><span class='duration'>0.00724s</span></dd>
-    <script type="text/javascript">moveProgressBar('73.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">family_name_kanaが入力されていない場合は登録できないこと</span><span class='duration'>0.00722s</span></dd>
-    <script type="text/javascript">moveProgressBar('78.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">first_name_kanaが入力されていない場合は登録できないこと</span><span class='duration'>0.00615s</span></dd>
-    <script type="text/javascript">moveProgressBar('82.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">birthdayが入力されていない場合は登録できないこと</span><span class='duration'>0.00974s</span></dd>
-    <script type="text/javascript">moveProgressBar('86.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">family_nameが全角入力でなければ登録できないこと</span><span class='duration'>0.00642s</span></dd>
-    <script type="text/javascript">moveProgressBar('91.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">first_nameが全角入力でなければ登録できないこと</span><span class='duration'>0.00626s</span></dd>
-    <script type="text/javascript">moveProgressBar('95.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">family_name_kanaが全角カタカナ入力でなければ登録できないこと</span><span class='duration'>0.00661s</span></dd>
+    <script type="text/javascript">moveProgressBar('37.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">nicknameが入力されていない場合は登録できないこと</span><span class='duration'>0.00807s</span></dd>
+    <script type="text/javascript">moveProgressBar('41.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">nicknameが21文字以上で入力されている場合は登録できないこと</span><span class='duration'>0.00347s</span></dd>
+    <script type="text/javascript">moveProgressBar('45.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">emailが入力されていない場合は登録できないこと</span><span class='duration'>0.00611s</span></dd>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">重複したemailが入力されている場合は登録できないこと</span><span class='duration'>0.01367s</span></dd>
+    <script type="text/javascript">moveProgressBar('54.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">passwordが入力されていない場合は登録できないこと</span><span class='duration'>0.00724s</span></dd>
+    <script type="text/javascript">moveProgressBar('58.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">passwordが5文字以下の場合は登録できないこと</span><span class='duration'>0.00821s</span></dd>
+    <script type="text/javascript">moveProgressBar('62.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">passwordが存在してもpassword_confirmationが空では登録できない</span><span class='duration'>0.00502s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">family_nameが入力されていない場合は登録できないこと</span><span class='duration'>0.00620s</span></dd>
+    <script type="text/javascript">moveProgressBar('70.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">first_nameが入力されていない場合は登録できないこと</span><span class='duration'>0.00594s</span></dd>
+    <script type="text/javascript">moveProgressBar('75.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">family_name_kanaが入力されていない場合は登録できないこと</span><span class='duration'>0.00763s</span></dd>
+    <script type="text/javascript">moveProgressBar('79.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">first_name_kanaが入力されていない場合は登録できないこと</span><span class='duration'>0.00740s</span></dd>
+    <script type="text/javascript">moveProgressBar('83.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">birthdayが入力されていない場合は登録できないこと</span><span class='duration'>0.00628s</span></dd>
+    <script type="text/javascript">moveProgressBar('87.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">family_nameが全角入力でなければ登録できないこと</span><span class='duration'>0.00775s</span></dd>
+    <script type="text/javascript">moveProgressBar('91.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">first_nameが全角入力でなければ登録できないこと</span><span class='duration'>0.00643s</span></dd>
+    <script type="text/javascript">moveProgressBar('95.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">family_name_kanaが全角カタカナ入力でなければ登録できないこと</span><span class='duration'>0.00601s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">first_name_kanaが全角カタカナ入力でなければ登録できないこと</span><span class='duration'>0.00673s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">first_name_kanaが全角カタカナ入力でなければ登録できないこと</span><span class='duration'>0.00727s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.55558 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "23 examples, 0 failures";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.35516 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "24 examples, 0 failures";</script>
 </div>
 </div>
 </body>
