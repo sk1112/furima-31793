@@ -13,7 +13,7 @@ RSpec.describe Item, type: :model do
         end
 
         it 'nameが入力されていれば出品できること' do
-          @item.name = "PS5"
+          @item.name = 'PS5'
           expect(@item).to be_valid
         end
 
@@ -23,7 +23,7 @@ RSpec.describe Item, type: :model do
         end
 
         it 'priceの値が300〜9999999の範囲内であれば出品できること' do
-          @item.price 
+          @item.price
           expect(@item).to be_valid
         end
 
@@ -60,30 +60,30 @@ RSpec.describe Item, type: :model do
 
       context '商品出品ができないとき' do
         it 'nameが入力されていない場合は出品できないこと' do
-          @item.name = ""
+          @item.name = ''
           @item.valid?
           expect(@item.errors[:name]).to include('を入力してください')
         end
 
         it 'descriptionが入力されていない場合は出品できないこと' do
-          @item.description = ""
+          @item.description = ''
           @item.valid?
           expect(@item.errors[:description]).to include('を入力してください')
         end
 
         it 'priceが入力されていない場合は出品できないこと' do
-          @item.price = ""
+          @item.price = ''
           @item.valid?
           expect(@item.errors[:price]).to include('を入力してください')
         end
 
         it 'priceの値が300〜9999999の範囲内でない場合は出品できないこと' do
-          @item.price = 10000000
+          @item.price = 10_000_000
           expect(@item.errors[:price]).not_to include('は不正な値です')
         end
 
         it 'priceが半角英数字以外で入力されている場合は出品できないこと' do
-          @item.price = "５００００"
+          @item.price = '５００００'
           expect(@item.errors[:price]).not_to include('は不正な値です')
         end
 
@@ -113,12 +113,12 @@ RSpec.describe Item, type: :model do
         end
 
         it 'user_idが存在しない場合は出品できないこと' do
-          @item.user_id = ""
+          @item.user_id = ''
           expect(@item.errors[:user_id]).not_to include('が存在していません')
         end
 
         it 'imageが選択されていない場合は出品できないこと' do
-          @item.image = ""
+          @item.image = ''
           expect(@item.errors[:image]).not_to include('を入力してください')
         end
       end

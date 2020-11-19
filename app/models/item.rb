@@ -7,11 +7,11 @@ class Item < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to_active_hash :delivery_fee
   belongs_to_active_hash :delivery_day
-  
+
   with_options presence: true do
     validates :name
     validates :description, length: { maximum: 1000 }
-    validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { greater_than: 300, less_than: 9999999 }
+    validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { greater_than: 300, less_than: 9_999_999 }
     validates :user_id
     validates :image
   end

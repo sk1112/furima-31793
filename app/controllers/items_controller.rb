@@ -1,11 +1,11 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   before_action :move_to_new_user_session, only: [:new]
-  
+
   def index
-    items = Item.includes(:user) 
+    items = Item.includes(:user)
   end
- 
+
   def new
     @item = Item.new
   end
@@ -26,9 +26,6 @@ class ItemsController < ApplicationController
   end
 
   def move_to_new_user_session
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
+    redirect_to new_user_session_path unless user_signed_in?
   end
-
 end
