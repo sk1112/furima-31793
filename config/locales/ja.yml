@@ -17,7 +17,16 @@ ja:
         description: 詳しい説明
         created_at: 登録日時
         updated_at: 更新日時
-    messages:
+      item:
+        name: 商品名
+        description: 商品の説明
+        price: 販売価格
+        category_id: カテゴリー
+        condition_id: 商品の状態
+        prefecture_id: 配送元の地域
+        delivery_day_id: 配送料の負担
+        delivery_fee_id: 発送までの日数
+        image: 商品画像
       accepted: を受諾してください
       blank: を入力してください
       confirmation: と%{attribute}の入力が一致しません
