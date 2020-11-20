@@ -13,18 +13,18 @@ RSpec.describe User, type: :model do
         end
 
         it 'nicknameが20文字以内で入力されていれば登録できること' do
-          @user.nickname = "鈴木功成"
+          @user.nickname = '鈴木功成'
           expect(@user).to be_valid
         end
 
         it '@を含むemailが入力されていれば登録できること' do
-          @user.email = "ks011012@gmail.com"
+          @user.email = 'ks011012@gmail.com'
           expect(@user).to be_valid
         end
 
         it 'passwordが6文字以上の半角英数字で、password_confirmationと値が一致していれば登録できること' do
-          @user.password = "tech31793"
-          @user.password_confirmation = "tech31793" 
+          @user.password = 'tech31793'
+          @user.password_confirmation = 'tech31793'
           @user.password == @user.password_confirmation
           expect(@user).to be_valid
         end
@@ -58,7 +58,7 @@ RSpec.describe User, type: :model do
         end
 
         it 'nicknameが21文字以上で入力されている場合は登録できないこと' do
-          @user.nickname = "鈴木功成鈴木功成鈴木功成鈴木功成鈴木功成鈴木功成"
+          @user.nickname = '鈴木功成鈴木功成鈴木功成鈴木功成鈴木功成鈴木功成'
           expect(@user.errors[:nickname]).not_to include('を入力してください')
         end
 
@@ -69,7 +69,7 @@ RSpec.describe User, type: :model do
         end
 
         it 'emailが@マークが含まれていないと登録できないこと' do
-          @user.email = "ks011012.gmail.com"
+          @user.email = 'ks011012.gmail.com'
           expect(@user.errors[:email]).not_to include('は不正な値です')
         end
 
@@ -94,20 +94,20 @@ RSpec.describe User, type: :model do
         end
 
         it 'passwordが英語のみでは登録できないこと' do
-          @user.password = "techcamp"
-          @user.password_confirmation = "techcamp"
+          @user.password = 'techcamp'
+          @user.password_confirmation = 'techcamp'
           expect(@user.errors[:password]).not_to include('は不正な値です')
         end
 
         it 'passwordが数字のみでは登録できないこと' do
-          @user.password = "123456"
-          @user.password_confirmation = "123456"
+          @user.password = '123456'
+          @user.password_confirmation = '123456'
           expect(@user.errors[:password]).not_to include('は不正な値です')
         end
 
         it 'passwordが全角では登録できないこと' do
-          @user.password = "ｔｅｃｈ３１７９３"
-          @user.password_confirmation = "ｔｅｃｈ３１７９３"
+          @user.password = 'ｔｅｃｈ３１７９３'
+          @user.password_confirmation = 'ｔｅｃｈ３１７９３'
           expect(@user.errors[:password]).not_to include('は不正な値です')
         end
 
