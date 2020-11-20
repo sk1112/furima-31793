@@ -11,51 +11,6 @@ RSpec.describe Item, type: :model do
         it '全ての項目が入力されていれば出品できること' do
           expect(@item).to be_valid
         end
-
-        it 'nameが入力されていれば出品できること' do
-          @item.name = 'PS5'
-          expect(@item).to be_valid
-        end
-
-        it 'descriptionが入力されていれば出品できること' do
-          @item.description
-          expect(@item).to be_valid
-        end
-
-        it 'priceの値が300〜9999999の範囲内であれば出品できること' do
-          @item.price
-          expect(@item).to be_valid
-        end
-
-        it 'category_idが1以外を選択されていれば出品できること' do
-          @item.category_id
-          expect(@item).to be_valid
-        end
-
-        it 'condition_idが1以外を選択されていれば出品できること' do
-          @item.condition_id
-          expect(@item).to be_valid
-        end
-
-        it 'prefecture_idが1以外を選択されていれば出品できること' do
-          @item.prefecture_id
-          expect(@item).to be_valid
-        end
-
-        it 'delivery_day_idが1以外を選択されていれば出品できること' do
-          @item.delivery_day_id
-          expect(@item).to be_valid
-        end
-
-        it 'user_idが存在していれば出品できること' do
-          @item.user_id
-          expect(@item).to be_valid
-        end
-
-        it 'imageが選択されていれば出品できること' do
-          @item.image
-          expect(@item).to be_valid
-        end
       end
 
       context '商品出品ができないとき' do
@@ -79,6 +34,11 @@ RSpec.describe Item, type: :model do
 
         it 'priceの値が300〜9999999の範囲内でない場合は出品できないこと' do
           @item.price = 10_000_000
+          expect(@item.errors[:price]).not_to include('は不正な値です')
+        end
+
+        it 'priceの値が300〜9999999の範囲内でない場合は出品できないこと' do
+          @item.price = 299
           expect(@item.errors[:price]).not_to include('は不正な値です')
         end
 
