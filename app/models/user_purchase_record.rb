@@ -1,7 +1,7 @@
 class UserPurchaseRecord
   include ActiveModel::Model
   attr_accessor :postal_code, :prefecture_id, :city, :detailed_address, :apartment,
-                :phone_number, :token, :user_id, :item_id, :purchase_record_id
+                :phone_number, :token, :user_id, :item_id
 
   with_options presence: true do
     validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/, allow_blank: true }, length: { maximum: 8 }
