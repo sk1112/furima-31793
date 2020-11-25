@@ -1,7 +1,5 @@
 ja:
   activerecord:
-    models:
-      user: ユーザー
     attributes:
       user:
         nickname: ニックネーム
@@ -27,6 +25,19 @@ ja:
         delivery_day_id: 配送料の負担
         delivery_fee_id: 発送までの日数
         image: 商品画像
+      purchase_record:
+        user: ユーザー
+        item: 商品
+  activemodel:
+    attributes:
+      user_purchase_record:
+        postal_code: 郵便番号
+        prefecture_id: 都道府県
+        city: 市区町村
+        detailed_address: 番地
+        apartment: 建物名
+        phone_number: 電話番号
+        token: クレジットカード情報
       accepted: を受諾してください
       blank: を入力してください
       confirmation: と%{attribute}の入力が一致しません
