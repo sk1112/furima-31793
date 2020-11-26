@@ -39,7 +39,6 @@
       <% end %>
     <% end %>
 
-    <% if user_signed_in? && current_user.id == @item.user.id %>
     <div class="item-explain-box">
       <span><%= @item.description %></span>
     </div>
@@ -71,7 +70,6 @@
         </tr>
       </tbody>
     </table>
-    <% end %>
     <div class="option">
       <div class="favorite-btn">
         <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>

@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   with_options uniqueness: true do
     validates :email
-    validates :encrypted_password, format: { with: /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/, allow_blank: true }
+    validates :encrypted_password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, allow_blank: true }
   end
   with_options presence: true do
     validates :nickname, length: { maximum: 20 }
