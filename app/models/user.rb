@@ -7,10 +7,8 @@ class User < ApplicationRecord
   has_many :items
   has_many :purchase_records
 
-  with_options uniqueness: true do
-    validates :email
-    validates :encrypted_password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, allow_blank: true }
-  end
+  validates :email, uniqueness: true
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze, allow_blank: true }
   with_options presence: true do
     validates :nickname, length: { maximum: 20 }
     validates :password_confirmation
